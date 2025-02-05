@@ -1,0 +1,67 @@
+1. git init
+-> to initialize a new git repo in local machine
+
+2. git status
+-> to check status
+
+3. git add Abc.java
+-> to track untracked file
+
+4. git add .
+-> to track all untracked file
+
+5. git commit -m "Abc.java created"
+-> to commit changes
+
+6. git remote add origin https://github.com/rakesh-roy-w/test.git
+-> to add local repo with remote git repo
+
+7. git config --global user.email rakesh.roy@wissen.com
+-> to configure remote git repo user email with local repo
+
+8. git config --global user.name rakesh-roy-w
+-> to configure remote git repo user name with local repo
+
+9. git push -u origin master
+-> push changes to remote master branch
+
+10. git log
+-> show all commit logs
+
+11. git branch myNewBranch
+-> create new branch but does not checkout to new branch
+
+12. notepad Master.java
+-> create a file with name Master.java and open the file in notepad
+
+13. git checkout myNewBranch
+-> switch to new branch
+
+14. git checkout master
+	git merge myNewBranch
+-> merge new branch to master
+
+15. git branch -d myNewBranch
+-> delete a branch in local repo
+
+16. git push origin --delete myNewBranch
+-> delete a branch in remote repo
+
+17. git tag v2.0
+-> add tag(v2.0) in local repo
+
+18. git push --tags
+-> push tag in remote repo
+
+19. git tag --delete v2.0
+-> delete a tag(v2.0) in local repo
+
+20. git push origin -d v2.0
+-> delete a tag(v2.0) in remote repo
+
+21. git reset <commit>
+-> undo the last commit
+
+22. git rebase <branch>
+-> Rewrites commit history by applying changes from one branch onto another,
+creating a clean, linear history without merge commits

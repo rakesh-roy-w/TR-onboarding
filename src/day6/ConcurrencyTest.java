@@ -1,4 +1,4 @@
-package day5;
+package day6;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

@@ -1,0 +1,26 @@
+// find emp name and manager name
+SELECT e1.name, e2.name AS managerName FROM EMPLOYEE e1 JOIN EMPLOYEE e2
+ON (e1.managerId = e2.empId) WHERE e1.empId = 0001;
+
+// find max salary from each department
+
+select e.empId, e.salary, e.dept from EMPLOYEE e
+where e.salary = (select max(salary) from EMPLOYEE where dept = e.dept);
+
+// fetch duplicate data
+
+select e.name, count(*) as nameCount from EMPLOYEE e group by e.name having count(*) > 1;
+
+// delete duplicate data
+
+DELETE e1
+FROM EMPLOYEE e1
+JOIN EMPLOYEE e2
+    ON e1.name = e2.name AND e1.managerId = e2.managerId
+    AND e1.empId > e2.empId;
+
+//fetch duplicate data
+
+select e1.name, count(*) from EMPLOYEE e1 JOIN EMPLOYEE e2
+ON e1.name = e2.name and e1.managerId = e2.managerId
+and e1.empId != e2.empId group by e1.name;
